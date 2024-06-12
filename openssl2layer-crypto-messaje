@@ -1,0 +1,40 @@
+from OpenSSL import crypto
+import base64
+
+# İlk katman şifreleme için anahtar ve IV (Initialization Vector)
+key1 = b'ilk_katman_anahtar'
+iv1 = b'ilk_katman_iv'
+
+# İkinci katman şifreleme için anahtar ve IV
+key2 = b'ikinci_katman_anahtar'
+iv2 = b'ikinci_katman_iv'
+
+def encrypt(data, key, iv):
+    cipher = crypto.Cipher('aes-256-cbc', key, iv, 1)
+    encrypted_data = cipher.update(data) + cipher.final()
+    return base64.b64encode(encrypted_data)
+
+def decrypt(encrypted_data, key, iv):
+    encrypted_data = base64.b64decode(encrypted_data)
+    cipher = crypto.Cipher('aes-256-cbc', key, iv, 0)
+    decrypted_data = cipher.update(encrypted_data) + cipher.final()
+    return decrypted_data
+
+# Örnek veri
+data = b'Merhaba, bu bir test mesajidir.'
+
+# Veriyi ilk katmanda şifrele
+encrypted_data_layer1 = encrypt(data, key1, iv1)
+
+# İlk katmanda şifrelenmiş veriyi ikinci katmanda şifrele
+encrypted_data_layer2 = encrypt(encrypted_data_layer1, key2, iv2)
+
+# Şifrelenmiş veriyi çöz
+decrypted_data_layer1 = decrypt(encrypted_data_layer2, key2, iv2)
+
+# İlk katmanda çözülmüş veriyi tamamen çöz
+decrypted_data = decrypt(decrypted_data_layer1, key1, iv1)
+
+print(f'Orijinal veri: {data}')
+print(f'Çift katmanlı şifrelenmiş veri: {encrypted_data_layer2}')
+print(f'Çözülmüş veri: {decrypted_data}')
