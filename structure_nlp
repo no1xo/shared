@@ -1,0 +1,128 @@
+{
+  "name": "NLP Pipeline",
+  "components": [
+    {
+      "name": "Text Input",
+      "type": "input",
+      "description": "Raw text input"
+    },
+    {
+      "name": "Tokenization",
+      "type": "processor",
+      "description": "Split text into individual words or tokens",
+      "input": "Text Input",
+      "output": "Tokenized Text"
+    },
+    {
+      "name": "Stopword Removal",
+      "type": "processor",
+      "description": "Remove common stopwords from the tokenized text",
+      "input": "Tokenized Text",
+      "output": "Filtered Text"
+    },
+    {
+      "name": "Stemming or Lemmatization",
+      "type": "processor",
+      "description": "Reduce words to their base form",
+      "input": "Filtered Text",
+      "output": "Normalized Text"
+    },
+    {
+      "name": "Named Entity Recognition (NER)",
+      "type": "processor",
+      "description": "Identify named entities in the text",
+      "input": "Normalized Text",
+      "output": "Entities"
+    },
+    {
+      "name": "Part-of-Speech (POS) Tagging",
+      "type": "processor",
+      "description": "Identify the part of speech for each word",
+      "input": "Normalized Text",
+      "output": "POS Tags"
+    },
+    {
+      "name": "Dependency Parsing",
+      "type": "processor",
+      "description": "Analyze the grammatical structure of the sentence",
+      "input": "Normalized Text",
+      "output": "Dependency Parse Tree"
+    },
+    {
+      "name": "Semantic Role Labeling (SRL)",
+      "type": "processor",
+      "description": "Identify the roles played by entities in a sentence",
+      "input": "Entities",
+      "output": "SRL Output"
+    },
+    {
+      "name": " Sentiment Analysis",
+      "type": "processor",
+      "description": "Determine the sentiment of the text",
+      "input": "Normalized Text",
+      "output": "Sentiment Score"
+    },
+    {
+      "name": "Topic Modeling",
+      "type": "processor",
+      "description": "Identify underlying topics in the text",
+      "input": "Normalized Text",
+      "output": "Topic Distribution"
+    },
+    {
+      "name": "Output",
+      "type": "output",
+      "description": "Final output of the NLP pipeline"
+    }
+  ],
+  "connections": [
+    {
+      "from": "Text Input",
+      "to": "Tokenization"
+    },
+    {
+      "from": "Tokenization",
+      "to": "Stopword Removal"
+    },
+    {
+      "from": "Stopword Removal",
+      "to": "Stemming or Lemmatization"
+    },
+    {
+      "from": "Stemming or Lemmatization",
+      "to": "NER"
+    },
+    {
+      "from": "Stemming or Lemmatization",
+      "to": "POS Tagging"
+    },
+    {
+      "from": "Stemming or Lemmatization",
+      "to": "Dependency Parsing"
+    },
+    {
+      "from": "NER",
+      "to": "SRL"
+    },
+    {
+      "from": "Stemming or Lemmatization",
+      "to": "Sentiment Analysis"
+    },
+    {
+      "from": "Stemming or Lemmatization",
+      "to": "Topic Modeling"
+    },
+    {
+      "from": "SRL",
+      "to": "Output"
+    },
+    {
+      "from": "Sentiment Analysis",
+      "to": "Output"
+    },
+    {
+      "from": "Topic Modeling",
+      "to": "Output"
+    }
+  ]
+}
