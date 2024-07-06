@@ -1,0 +1,32 @@
+{
+    "Session": {
+        "Nodes": [{
+            "Node_ID": "2" // Node ID'si 2
+        }],
+        "Users": [{
+            "User_ID": "Admin" // Admin kullanıcısı
+        }],
+        "Roles": [{
+            "role": "System" // Rolü System olan kullanıcı
+        }],
+        "Rules": [{
+            "Rule_ID": 32, // Kuralların ID'si 32
+            "Rule_Active": true, // Kuralların aktif olması
+            "Request_Prompt": true, // İsteğe göre sorulan bir promptsun olması
+            "Response_Prompt": true, // Yanıta göre sorulan bir promptsun olması
+            "Flags": {
+                "Access": true // Yetkilendir
+            }
+        }],
+        "Actions": {
+            "Function": {
+                "Cmd": "Command", // Komut
+                "Content": {
+                    "ID_Aranan": [integer], // Mesajı alacak kişilerin ID'leri
+                    "ID_Arayan": [integer], // Mesajı gönderen kişilerin ID'leri
+                    "Mesaj": ["Header:":"Header","Body":"BodyText"] // Gönderilecek mesaj
+                }
+            }
+        }
+    }
+}
