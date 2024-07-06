@@ -1,0 +1,85 @@
+PYHTON BYTECODE
+    LOAD_GLOBAL: Global bir değişkeni yükle.
+    LOAD_FAST: Local bir değişkeni yükle.
+    STORE_FAST: Değişkenin değerini ata.
+    DELETE_FAST: Değişkeni sil.
+    UNARY_POSITIVE: Sayıyı pozitif tut.
+    UNARY_NEGATIVE: Sayıyı negatif tut.
+    UNARY_NOT: Boolean değerini tersine çevir.
+    UNARY_INVERT: Bitwise NOT işlemi yap.
+    BINARY_POWER: Üslü işlemi yap.
+    BINARY_MULTIPLY: Çarpım işlemi yap.
+    BINARY_DIVIDE: Bölme işlemi yap.
+    BINARY_MODULO: Mod alma işlemi yap.
+    BINARY_ADD: Toplama işlemi yap.
+    BINARY_SUBTRACT: Çıkarma işlemi yap.
+    BINARY_SUBSCRIBE: Liste veya dizideki bir öğeyi al.
+    BINARY_SLICE+: Liste veya dizideki bir öğeyi ata.
+    SETUP_LOOP: Döngü başlangıcı ayarla.
+    FOR_ITER: Döngü içindeki değişkeni al.
+    GET_ITER: Döngü içindeki değişkenin değerini al.
+    PRECALL_ARG: Argümanın önceki çağrıldığında kullanılacak.
+    CALL_FUNCTION: Fonksiyonu çağır.
+    MAKE_FUNCTION: Fonksiyon oluştur.
+    BUILD_LIST: Liste oluştur.
+    BUILD_MAP: Sözlük oluştur.
+    BUILD_SET: Küme oluştur.
+    IMPORT_NAME: Paketi veya modülü içe.
+    IMPORT_FROM: Paket veya modülün bir parçasını içe.
+    IMPORT_STAR: Paket veya modülün tümü içe.
+    EXEC_STMT: Blok çalıştır.
+    PRINT_EXPR: Değeri yazdır ve yazdır.
+    INPLACE_ADD: Değişkenin değerini artır.
+    INPLACE_SUBTRACT: Değişkenin değerini azalt.
+    STORE_SUBSCRIBE: Değişkenin değerini ata.
+    DELETE_SUBSCRIBE: Değişkenin değerini sil.
+    RERAISE: Özel durumu yükselt.
+    RERAISE_VARARGS: Özel durumu ve argümanları yükselt.
+    JUMP_FORWARD: Döngü önce git.
+    JUMP_ABSOLUTE: Döngü bitir.
+    POP_BLOCK: Blok sonu sil.
+    END_FINALLY: Try bloğun sonu.
+    WITH_CLEANUP: With bloğun sonu.
+    SETUP_EXCEPT: Özel durum bloğun başlangıcı.
+    SETUP_WITH: With bloğun başlangıcı.
+    SETUP_ASYNC_WITH: Asyncio ile çalıştırılan With bloğun başlangıcı.
+    BEFORE_ASYNC_WITH: Asyncio ile çalıştırılan With bloğun öncesi.
+    CONTINUE_LOOP: Döngü devam et.
+    BREAK_LOOP: Döngü kır.
+    RETURN_VALUE: Çıktı değerini döndür.
+    IMPORT_STAR_ASYNC: Asyncio ile çalıştırılan Import bloğun tümü içe.
+    LOAD_BUILD_CLASS: Sınıf oluştur.
+    CALL_METHOD: Özellik metotu çağır.
+    STORE_ATTR: Öznitelik değişkenine değer ata.
+    DELETE_ATTR: Öznitelik değişkenini sil.
+    UNPACK_SEQUENCE: Liste veya diziyi parçalar.
+    FOR_ITER_NEXT: Döngü içindeki değişkeni ilerlet.
+    GET_ITER_NEXT: Döngü içindeki değişkenin değerini ilerlet.
+    BUILD_CONST_KEY_MAP: Anahtar kelimesi oluştur.
+    BUILD_CONST_SIZE: Boyutu hesapla.
+    BUILD_STRING: Dize oluştur.
+    COMPARE_OP: Karşılaştırma işlemi yap.
+    IMPORT_STAR_SUBSCRIPTION: Subscription için kullanılan Import bloğun tümü içe.
+    SLICE+: Slice işlemi yap.
+    STORE_NAME: Değişkenin değerini ata.
+    DELETE_NAME: Değişkeni sil.
+    UNPACK_EX: Diziyi parçalar.
+    ASSERT_ALWAYS: Assertion için kullanılan.
+    ASSERT_MESSAGE: Assertion için kullanılan.
+    ASSERT_FLAG: Assertion için kullanılan.
+    YIELD_FROM: Coroutine'dan değer al.
+    GET_AITERABLE_SENTINEL: Iterable sentinel için kullanılan.
+    END_FINALLY_EXC: Finally bloğun sonu.
+    SETUP_FINALLY_EXC: Finally bloğun başlangıcı.
+    SETUP_ASYNC_WITH_EXC: Asyncio ile çalıştırılan Except bloğun başlangıcı.
+    SETUP_EXCEPT_EXC: Except bloğun başlangıcı.
+    RERAISE_VARARGS_EXC: Özel durumu ve argümanları yükselt.
+    CALL_FUNCTION_VAR: Fonksiyonu çağır ve argümanları al.
+    CALL_FUNCTION_KW: Fonksiyonu çağır ve keyword argümanları al.
+    CALL_FUNCTION_VAR_KW: Fonksiyonu çağır ve argümanları ve keyword argümanları al.
+    CALL_METHOD_VAR: Özellik metotu çağır ve argümanları al.
+    CALL_METHOD_KW: Özellik metotu çağır ve keyword argümanları al.
+    CALL_METHOD_VAR_KW: Özellik metotu çağır ve argümanları ve keyword argümanları al.
+    BUILD_CONST_UNICODE: Unicode dizesi oluştur.
+    BUILD_CONST_FROZEN: FrozenSet oluştur.
+    BUILD_CONST_LISTCOMP: ListCom
