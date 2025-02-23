@@ -1,5 +1,3 @@
-import pandas as pd
-
 data = [
     # Animals
     {"API Adı": "Cat Facts", "URL": "https://alexwohlbruck.github.io", "Açıklama": "Günlük kedi bilgileri"},
@@ -119,7 +117,80 @@ data = [
     {"API Adı": "QR code (goqr.me)", "URL": "https://goqr.me", "Açıklama": "QR kod grafiklerini üretir ve çözer"},
     {"API Adı": "QuickChart", "URL": "https://quickchart.io", "Açıklama": "Grafik ve çizelge resimleri üretir"},
     {"API Adı": "ReqRes", "URL": "https://reqres.in", "Açıklama": "AJAX istekleri için barındırılan REST API'si"}
+    # SMS Kategorisi
+    {
+        "Kategori": "SMS",
+        "API Adı": "Kannel SMS Gateway",
+        "URL": "http://www.kannel.org/",
+        "Açıklama": "Açık kaynaklı SMS ve WAP gateway; SMS gönderimi/alımı için REST API desteği sunar.",
+        "Python SDK / Kütüphane": "Resmi SDK olmamakla birlikte REST API üzerinden Python entegrasyonu yapılabilir."
+    },
+    {
+        "Kategori": "SMS",
+        "API Adı": "PlaySMS",
+        "URL": "http://playsms.org/",
+        "Açıklama": "Web arayüzü ve REST API desteği ile SMS gönderimi yapmanızı sağlayan açık kaynaklı SMS gateway.",
+        "Python SDK / Kütüphane": "Resmi bir Python SDK bulunmamakta; REST API çağrıları ile Python entegrasyonu mümkün."
+    },
+    # Call Kategorisi
+    {
+        "Kategori": "Call",
+        "API Adı": "Asterisk",
+        "URL": "https://www.asterisk.org/",
+        "Açıklama": "Açık kaynaklı telekomünikasyon platformu; VoIP ve sesli aramalar için kapsamlı API desteği sunar.",
+        "Python SDK / Kütüphane": "AMI (Asterisk Manager Interface) için 'pyst2' gibi Python kütüphaneleri mevcuttur."
+    },
+    {
+        "Kategori": "Call",
+        "API Adı": "FreeSWITCH",
+        "URL": "https://freeswitch.org/",
+        "Açıklama": "Açık kaynaklı iletişim platformu; sesli arama ve VoIP çözümleri için REST/ESL tabanlı entegrasyon sağlar.",
+        "Python SDK / Kütüphane": "ESL (Event Socket Library) için Python bağlayıcıları bulunmaktadır."
+    },
+    # WhatsApp Kategorisi
+    {
+        "Kategori": "WhatsApp",
+        "API Adı": "Yowsup",
+        "URL": "https://github.com/tgalal/yowsup",
+        "Açıklama": "Açık kaynaklı WhatsApp istemcisi; WhatsApp mesajlaşma özelliklerini Python üzerinden kullanmanıza olanak tanır.",
+        "Python SDK / Kütüphane": "Tamamen Python tabanlı, açık kaynaklı kütüphanedir."
+    },
+    # Email Kategorisi
+    {
+        "Kategori": "Email",
+        "API Adı": "smtplib",
+        "URL": "https://docs.python.org/3/library/smtplib.html",
+        "Açıklama": "Python'un yerleşik kütüphanesi; SMTP protokolü ile e-posta gönderimi sağlar.",
+        "Python SDK / Kütüphane": "Python Standard Library içinde mevcuttur."
+    },
+    {
+        "Kategori": "Email",
+        "API Adı": "Flask-Mail",
+        "URL": "https://pythonhosted.org/Flask-Mail/",
+        "Açıklama": "Flask tabanlı uygulamalar için e-posta gönderimini kolaylaştıran açık kaynaklı eklentidir.",
+        "Python SDK / Kütüphane": "Python ile entegre çalışır; açık kaynaklıdır."
+    },
+    # Geomap Kategorisi
+    {
+        "Kategori": "Geomap",
+        "API Adı": "OpenStreetMap API",
+        "URL": "https://www.openstreetmap.org/",
+        "Açıklama": "Açık kaynaklı harita verileri sunar; coğrafi konum ve harita entegrasyonu için kullanılabilir.",
+        "Python SDK / Kütüphane": "Python kütüphaneleri (osmnx, geopy) ile kolayca entegre edilebilir."
+    },
+    {
+        "Kategori": "Geomap",
+        "API Adı": "OSMnx",
+        "URL": "https://osmnx.readthedocs.io/",
+        "Açıklama": "OpenStreetMap verilerini çekmek ve analiz etmek için geliştirilmiş açık kaynaklı Python kütüphanesidir.",
+        "Python SDK / Kütüphane": "Tamamen Python tabanlı ve açık kaynaklıdır."
+    },
+    {
+        "Kategori": "Geomap",
+        "API Adı": "Geopy",
+        "URL": "https://geopy.readthedocs.io/",
+        "Açıklama": "Coğrafi kodlama (geocoding) işlemleri için farklı sağlayıcılarla çalışan açık kaynaklı Python kütüphanesidir.",
+        "Python SDK / Kütüphane": "Python ile entegre çalışır; açık kaynaklıdır."
+    }
 ]
 
-df = pd.DataFrame(data)
-print(df)
