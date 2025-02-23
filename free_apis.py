@@ -194,3 +194,93 @@ data = [
     }
 ]
 
+
+import pandas as pd
+
+# Kullanım amaçlı API kategorileri (usage-based)
+usage_based = [
+    {"Kategori (Türkçe)": "Pazarlama API’leri",         "Category (English)": "Marketing APIs"},
+    {"Kategori (Türkçe)": "Bankacılık ve Tahsilat API’leri", "Category (English)": "Banking & Payment APIs"},
+    {"Kategori (Türkçe)": "Web Sitesi API’leri",           "Category (English)": "Website APIs"},
+    {"Kategori (Türkçe)": "Sosyal Medya API’leri",         "Category (English)": "Social Media APIs"},
+    {"Kategori (Türkçe)": "E-posta ve Mesajlaşma API’leri", "Category (English)": "Email & Messaging APIs"},
+    {"Kategori (Türkçe)": "Haber API’leri",               "Category (English)": "News APIs"},
+    {"Kategori (Türkçe)": "Harita API’leri",              "Category (English)": "Mapping APIs"},
+    {"Kategori (Türkçe)": "Resim/Video API’leri",         "Category (English)": "Image/Video APIs"},
+    {"Kategori (Türkçe)": "Hava Durumu API’leri",         "Category (English)": "Weather APIs"},
+    {"Kategori (Türkçe)": "Spor API’leri",                "Category (English)": "Sports APIs"},
+    {"Kategori (Türkçe)": "İşletme API’leri",             "Category (English)": "Business APIs"},
+    {"Kategori (Türkçe)": "Müzik API’leri",               "Category (English)": "Music APIs"},
+    {"Kategori (Türkçe)": "Seyahat API’leri",             "Category (English)": "Travel APIs"},
+    {"Kategori (Türkçe)": "Finans API’leri",              "Category (English)": "Finance APIs"},
+    {"Kategori (Türkçe)": "Sağlık ve Fitness API’leri",     "Category (English)": "Health & Fitness APIs"},
+    {"Kategori (Türkçe)": "Eğlence API’leri",             "Category (English)": "Entertainment APIs"},
+    {"Kategori (Türkçe)": "Yemek & İçecek API’leri",      "Category (English)": "Food & Drink APIs"},
+    {"Kategori (Türkçe)": "Verimlilik API’leri",          "Category (English)": "Productivity APIs"},
+    {"Kategori (Türkçe)": "Geliştirici Araçları API’leri",  "Category (English)": "Developer Tools APIs"},
+    {"Kategori (Türkçe)": "Veri Bilimi ve Makine Öğrenimi API’leri", "Category (English)": "Data Science & Machine Learning APIs"},
+    {"Kategori (Türkçe)": "Oyun API’leri",                "Category (English)": "Gaming APIs"},
+    {"Kategori (Türkçe)": "Yardımcı Araçlar API’leri",      "Category (English)": "Utilities APIs"}
+]
+
+# publicapis.dev'den benzersiz (usage-based listede olmayan) kategoriler
+publicapis_categories = [
+    {"Kategori (Türkçe)": "Hayvanlar",                      "Category (English)": "Animals"},
+    {"Kategori (Türkçe)": "Anime",                          "Category (English)": "Anime"},
+    {"Kategori (Türkçe)": "Anti-Malware",                   "Category (English)": "Anti-Malware"},
+    {"Kategori (Türkçe)": "Sanat ve Tasarım",               "Category (English)": "Art & Design"},
+    {"Kategori (Türkçe)": "Kitaplar",                       "Category (English)": "Books"},
+    {"Kategori (Türkçe)": "Takvim",                         "Category (English)": "Calendar"},
+    {"Kategori (Türkçe)": "Bulut Depolama ve Dosya Paylaşımı","Category (English)": "Cloud Storage & File Sharing"},
+    {"Kategori (Türkçe)": "Sürekli Entegrasyon",            "Category (English)": "Continuous Integration"},
+    {"Kategori (Türkçe)": "Kripto Para",                    "Category (English)": "Cryptocurrency"},
+    {"Kategori (Türkçe)": "Döviz",                          "Category (English)": "Currency Exchange"},
+    {"Kategori (Türkçe)": "Veri Doğrulama",                 "Category (English)": "Data Validation"},
+    {"Kategori (Türkçe)": "Geliştirme",                     "Category (English)": "Development"},
+    {"Kategori (Türkçe)": "Sözlükler",                      "Category (English)": "Dictionaries"},
+    {"Kategori (Türkçe)": "Afetler",                        "Category (English)": "Disasters"},
+    {"Kategori (Türkçe)": "Belgeler ve Üretkenlik",         "Category (English)": "Documents & Productivity"},
+    {"Kategori (Türkçe)": "Eğitim",                         "Category (English)": "Education"},
+    {"Kategori (Türkçe)": "Çevre",                          "Category (English)": "Environment"},
+    {"Kategori (Türkçe)": "Etkinlikler",                    "Category (English)": "Events"},
+    {"Kategori (Türkçe)": "Dolandırıcılık Önleme",          "Category (English)": "Fraud Prevention"},
+    {"Kategori (Türkçe)": "Oyunlar ve Çizgi Romanlar",        "Category (English)": "Games & Comics"},
+    {"Kategori (Türkçe)": "Hükümet",                        "Category (English)": "Government"},
+    {"Kategori (Türkçe)": "İş İlanları",                    "Category (English)": "Jobs"},
+    {"Kategori (Türkçe)": "Açık Veri",                      "Category (English)": "Open Data"},
+    {"Kategori (Türkçe)": "Açık Kaynak Projeler",           "Category (English)": "Open Source Projects"},
+    {"Kategori (Türkçe)": "Patent",                         "Category (English)": "Patent"},
+    {"Kategori (Türkçe)": "Kişilik",                        "Category (English)": "Personality"},
+    {"Kategori (Türkçe)": "Fotoğrafçılık",                  "Category (English)": "Photography"},
+    {"Kategori (Türkçe)": "Bilim ve Matematik",             "Category (English)": "Science & Math"},
+    {"Kategori (Türkçe)": "Güvenlik",                       "Category (English)": "Security"},
+    {"Kategori (Türkçe)": "Alışveriş",                      "Category (English)": "Shopping"},
+    {"Kategori (Türkçe)": "Test Verileri",                  "Category (English)": "Test Data"},
+    {"Kategori (Türkçe)": "Metin Analizi",                  "Category (English)": "Text Analysis"},
+    {"Kategori (Türkçe)": "Takip",                        "Category (English)": "Tracking"},
+    {"Kategori (Türkçe)": "Ulaşım",                        "Category (English)": "Transportation"},
+    {"Kategori (Türkçe)": "Araçlar",                       "Category (English)": "Vehicle"}
+]
+
+# Birleştirirken, tekrarlı olanları engellemek için her iki listeden de benzersiz (unique) kategorileri bir set kullanarak topluyoruz
+def normalize_category(cat):
+    # Basitçe küçük harfe çevirip boşlukları kaldırarak normalize edelim
+    return cat.strip().lower().replace(" ", "").replace("&", "and")
+
+unique_categories = {}
+# Önce usage-based listeyi ekleyelim
+for item in usage_based:
+    key = normalize_category(item["Category (English)"])
+    unique_categories[key] = item
+
+# Ardından publicapis.dev listesindeki benzersiz kategorileri ekleyelim
+for item in publicapis_categories:
+    key = normalize_category(item["Category (English)"])
+    if key not in unique_categories:
+        unique_categories[key] = item
+
+# Son olarak, birleşik listeyi DataFrame'e dönüştürelim
+merged_list = list(unique_categories.values())
+df = pd.DataFrame(merged_list)
+print(df)
+
