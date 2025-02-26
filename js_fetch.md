@@ -111,4 +111,58 @@ class RealTimeWebSocket extends HTMLElement {
 
 customElements.define("real-time-websocket", RealTimeWebSocket);
 </script>
+------------------------------------------
 
+#SAMPLE FETCH...
+
+async function getStockData() {
+    const response = await fetch("https://bigpara.hurriyet.com.tr/borsa/canli-borsa/");
+    const text = await response.text();
+
+    // HTML içeriğini parse et
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+
+    // İlgili div'in içeriğini al
+    const stockData = doc.querySelector("#content > div > div.contentLeft > div > div.wideContent.sort-bar-x > div.liveStockBar.liveStockFilterBar > div.latestDataTime");
+
+    console.log(stockData ? stockData.innerText : "Veri bulunamadı.");
+}
+
+getStockData();
+----------------------------------
+
+### 
+npm init -y
+npm install express axios cheerio cors
+####
+
+
+###
+const express = require("express");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const cors = require("cors");
+
+const app = express();
+app.use(cors());
+
+app.get("/borsa", async (req, res) => {
+    try {
+        const url = "https://bigpara.hurriyet.com.tr/borsa/canli-borsa/";
+        const response = await axios.get(url);
+        const $ = cheerio.load(response.data);
+
+        // İstenen div'in içeriğini al
+        const stockData = $("#content > div > div.contentLeft > div > div.wideContent.sort-bar-x > div.liveStockBar.liveStockFilterBar > div.latestDataTime").text();
+
+        res.json({ data: stockData.trim() });
+    } catch (error) {
+        res.status(500).json({ error: "Veri çekme hatası" });
+    }
+});
+
+app.listen(3000, () => console.log("Proxy çalışıyor: http://localhost:3000"));
+
+
+####
