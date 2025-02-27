@@ -1,26 +1,8 @@
 data = [
     # Animals
-    {"API Adı": "Cat Facts", "URL": "https://alexwohlbruck.github.io", "Açıklama": "Günlük kedi bilgileri"},
-    {"API Adı": "Cataas", "URL": "https://cataas.com", "Açıklama": "Kedi servisi: kedi resimleri ve gif'leri"},
-    {"API Adı": "Dog API", "URL": "https://dogapi.dog", "Açıklama": "Köpek ırkları ve grupları hakkında eğlenceli bilgiler"},
-    {"API Adı": "Dogs", "URL": "https://dog.ceo", "Açıklama": "Stanford Köpek Veri Seti'ne dayalı"},
-    {"API Adı": "Foxes", "URL": "https://foxes.cool", "Açıklama": "Farklı etiketlere sahip rastgele tilki resimleri"},
-    {"API Adı": "HTTPCat", "URL": "https://http.cat", "Açıklama": "Her HTTP durum kodu için kedi görseli"},
-    {"API Adı": "HTTP Dogs", "URL": "https://http.dog", "Açıklama": "Her HTTP durum kodu için köpek görseli"},
-    {"API Adı": "Meow Facts", "URL": "https://meowfacts.herokuapp.com", "Açıklama": "Basit bir API; kedi gerçeği döndürür"},
-    {"API Adı": "Movebank", "URL": "https://www.movebank.org", "Açıklama": "Hayvanların hareket ve göç verileri"},
-    {"API Adı": "Petfinder", "URL": "https://www.petfinder.com", "Açıklama": "Köpek ırkları hakkında bilgi ve resimler"},
-    {"API Adı": "RandomBigCat", "URL": "https://randombig.cat", "Açıklama": "Büyük kedilerin rastgele resimleri"},
-    {"API Adı": "RandomDog", "URL": "https://random.dog", "Açıklama": "Köpeklerin rastgele resimleri"},
-    {"API Adı": "RandomFox", "URL": "https://randomfox.ca", "Açıklama": "Tilkilerin rastgele resimleri"},
-    {"API Adı": "RescueGroups", "URL": "https://userguide.rescuegroups.org", "Açıklama": "Evlat edinme"},
     
-    # Anime
-    {"API Adı": "AnimeNewsNetwork", "URL": "https://www.animenewsnetwork.com", "Açıklama": "Anime sektörü haberleri"},
-    {"API Adı": "AOT quotes", "URL": "https://attackontitanquotes.vercel.app", "Açıklama": "Attack on Titan alıntıları API'si"},
-    {"API Adı": "Jikan", "URL": "https://jikan.moe", "Açıklama": "Resmi olmayan MyAnimeList API'si"},
-    {"API Adı": "Mangadex", "URL": "https://api.mangadex.org", "Açıklama": "Reklamsız manga okuyucu; yüksek kaliteli resimler sunar"},
-    {"API Adı": "Nekosia API", "URL": "https://nekosia.cat", "Açıklama": "Sevimli rastgele resimlere sahip anime API'si"},
+    
+    
     
     # Anti-Malware
     {"API Adı": "FishFish", "URL": "https://fishfish.gg", "Açıklama": "Discord güvenliği için gönüllü siber güvenlik projesi"},
@@ -84,39 +66,7 @@ data = [
     {"API Adı": "PurgoMalum", "URL": "https://www.purgomalum.com", "Açıklama": "Küfür ve argo içeriğe karşı içerik doğrulaması"},
     {"API Adı": "vatlayer", "URL": "https://vatlayer.com", "Açıklama": "KDV numarası doğrulama"},
     
-    # Development
-    {"API Adı": "0ms DNS Accelerator", "URL": "https://0ms.dev", "Açıklama": "Herhangi bir DoH sağlayıcısını test edip hızlandırır"},
-    {"API Adı": "0ms Get IP", "URL": "https://0ms.dev", "Açıklama": "IP, ISS ve konum bilgisi verir"},
-    {"API Adı": "0ms Mirrors", "URL": "https://0ms.dev", "Açıklama": "Web siteleri için önbellek proxy API'si"},
-    {"API Adı": "24 Pull Requests", "URL": "https://24pullrequests.com", "Açıklama": "Açık kaynak iş birliği projesi"},
-    {"API Adı": "Abacus", "URL": "https://abacus.jasoncameron.dev", "Açıklama": "Olayları takip etmek için basit sayaç servisi"},
-    {"API Adı": "Agify.io", "URL": "https://agify.io", "Açıklama": "Bir isme göre tahmini yaş hesaplar"},
-    {"API Adı": "APIs.guru", "URL": "https://apis.guru", "Açıklama": "Web API'leri ve OpenAPI şemaları için bir Wikipedia"},
-    {"API Adı": "CDNJS", "URL": "https://api.cdnjs.com", "Açıklama": "CDNJS üzerindeki kütüphane bilgileri"},
-    {"API Adı": "DigitalOcean Status", "URL": "https://status.digitalocean.com", "Açıklama": "DigitalOcean hizmetlerinin durumu"},
-    {"API Adı": "ExtendsClass", "URL": "https://extendsclass.com", "Açıklama": "Basit JSON depolama API'si"},
-    {"API Adı": "FontDownloader", "URL": "https://fontdownloader.org", "Açıklama": "Google Fonts'tan web fontlarını yönetir"},
-    {"API Adı": "Form2Channel", "URL": "https://form2channel.com", "Açıklama": "Form gönderimlerini Google Sheets, E-posta, Slack veya Telegram'a iletir"},
-    {"API Adı": "Genderize.io", "URL": "https://genderize.io", "Açıklama": "Bir isme göre cinsiyet tahmini yapar"},
-    {"API Adı": "HTTP2.Pro", "URL": "https://http2.pro", "Açıklama": "HTTP/2 protokol desteğini test eder"},
-    {"API Adı": "Image-Charts", "URL": "https://www.image-charts.com", "Açıklama": "Grafik, QR kod ve çizelge üretir"},
-    {"API Adı": "ipapi.is", "URL": "https://ipapi.is", "Açıklama": "Şirket ve ASN bilgilerine sahip halka açık IP API'si"},
-    {"API Adı": "IPGEO", "URL": "https://api.techniknews.net", "Açıklama": "Kullanışlı bilgilerle ücretsiz IP API'si"},
-    {"API Adı": "IPify", "URL": "https://www.ipify.org", "Açıklama": "Basit IP adresi API'si"},
-    {"API Adı": "IPinfo", "URL": "https://ipinfo.io", "Açıklama": "Bir başka basit IP adresi API'si"},
-    {"API Adı": "ArulJohn.com", "URL": "https://api.aruljohn.com", "Açıklama": "JSON formatında basit IP API'si"},
-    {"API Adı": "jsDelivr", "URL": "https://www.jsdelivr.com", "Açıklama": "Paket bilgileri ve indirme istatistikleri"},
-    {"API Adı": "JSON 2 JSONP", "URL": "https://json2jsonp.com", "Açıklama": "JSON'u anında JSONP'ye dönüştürür"},
-    {"API Adı": "Judge0", "URL": "https://api.judge0.com", "Açıklama": "Kaynak kodu derleyip çalıştırır"},
-    {"API Adı": "Let's Validate", "URL": "N/A", "Açıklama": "Web sitelerinde kullanılan teknolojileri ortaya çıkarır ve küçük resim oluşturur"},
-    {"API Adı": "License-API", "URL": "N/A", "Açıklama": "choosealicense.com için resmi olmayan REST API'si"},
-    {"API Adı": "Nationalize.io", "URL": "https://nationalize.io", "Açıklama": "Bir isme göre milliyeti tahmin eder"},
-    {"API Adı": "OOPSpam", "URL": "https://oopspam.com", "Açıklama": "Çoklu spam filtreleme servisi"},
-    {"API Adı": "Public APIs", "URL": "N/A", "Açıklama": "Web geliştirme için ücretsiz JSON API'lerin toplu listesi"},
-    {"API Adı": "QR code (qrtag.net)", "URL": "https://qrtag.net", "Açıklama": "QR kod ve URL kısaltıcı oluşturur"},
-    {"API Adı": "QR code (goqr.me)", "URL": "https://goqr.me", "Açıklama": "QR kod grafiklerini üretir ve çözer"},
-    {"API Adı": "QuickChart", "URL": "https://quickchart.io", "Açıklama": "Grafik ve çizelge resimleri üretir"},
-    {"API Adı": "ReqRes", "URL": "https://reqres.in", "Açıklama": "AJAX istekleri için barındırılan REST API'si"}
+   
     # SMS Kategorisi
     {
         "Kategori": "SMS",
@@ -195,10 +145,6 @@ data = [
 ]
 
 
-import pandas as pd
-
-# Kullanım amaçlı API kategorileri (usage-based)
-usage_based = [
     {"Kategori (Türkçe)": "Pazarlama API’leri",         "Category (English)": "Marketing APIs"},
     {"Kategori (Türkçe)": "Bankacılık ve Tahsilat API’leri", "Category (English)": "Banking & Payment APIs"},
     {"Kategori (Türkçe)": "Web Sitesi API’leri",           "Category (English)": "Website APIs"},
@@ -221,10 +167,6 @@ usage_based = [
     {"Kategori (Türkçe)": "Veri Bilimi ve Makine Öğrenimi API’leri", "Category (English)": "Data Science & Machine Learning APIs"},
     {"Kategori (Türkçe)": "Oyun API’leri",                "Category (English)": "Gaming APIs"},
     {"Kategori (Türkçe)": "Yardımcı Araçlar API’leri",      "Category (English)": "Utilities APIs"}
-]
-
-# publicapis.dev'den benzersiz (usage-based listede olmayan) kategoriler
-publicapis_categories = [
     {"Kategori (Türkçe)": "Hayvanlar",                      "Category (English)": "Animals"},
     {"Kategori (Türkçe)": "Anime",                          "Category (English)": "Anime"},
     {"Kategori (Türkçe)": "Anti-Malware",                   "Category (English)": "Anti-Malware"},
@@ -260,27 +202,6 @@ publicapis_categories = [
     {"Kategori (Türkçe)": "Takip",                        "Category (English)": "Tracking"},
     {"Kategori (Türkçe)": "Ulaşım",                        "Category (English)": "Transportation"},
     {"Kategori (Türkçe)": "Araçlar",                       "Category (English)": "Vehicle"}
-]
 
-# Birleştirirken, tekrarlı olanları engellemek için her iki listeden de benzersiz (unique) kategorileri bir set kullanarak topluyoruz
-def normalize_category(cat):
-    # Basitçe küçük harfe çevirip boşlukları kaldırarak normalize edelim
-    return cat.strip().lower().replace(" ", "").replace("&", "and")
 
-unique_categories = {}
-# Önce usage-based listeyi ekleyelim
-for item in usage_based:
-    key = normalize_category(item["Category (English)"])
-    unique_categories[key] = item
-
-# Ardından publicapis.dev listesindeki benzersiz kategorileri ekleyelim
-for item in publicapis_categories:
-    key = normalize_category(item["Category (English)"])
-    if key not in unique_categories:
-        unique_categories[key] = item
-
-# Son olarak, birleşik listeyi DataFrame'e dönüştürelim
-merged_list = list(unique_categories.values())
-df = pd.DataFrame(merged_list)
-print(df)
 
